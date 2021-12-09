@@ -1,0 +1,66 @@
+:root{
+    --main-text-color:#d43219;
+    --main-back-color:#3b3938;
+    --porject-back-color:#262322;
+    --navbar-back-color:#36384e;
+}
+*{
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "welcome"
+    "projects"
+    "contact"
+    ;
+}
+#navbar{
+    position: fixed;
+    height: 5vh;
+    background-color: var(--navbar-back-color);
+    width: 100%;
+    /* grid-area: navbar; */
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    float: right;
+   
+}
+.nav-links a{
+    text-decoration: none;
+    color:white;
+}
+.nav-link{
+    padding: 1vh;
+}
+@media (max-height: 500px) {
+    #navbar{
+        height: 5vw;
+    }
+    .nav-link{
+        padding: 1vw;
+    }
+}
+
+#welcome-section{
+    text-align: center;
+    height: 100vh;
+    width: auto;
+    background:linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+#welcome-text{
+    padding-top: 50vh;
+    color: var(--main-text-color);
+}
+#projects {
+    height: 30%;
+    display: grid;
+}
+.project img{
+    height: 40vh;
+}
+
